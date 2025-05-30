@@ -1,9 +1,9 @@
 [package]
 name = "axum-static-s3"
 authors = ["Daniel Pruessner <daniel.pruessner@ieee.org>"]
-license = "MIT OR Apache-2.0"
+license = "MIT"
 description = "A simple static file server for AWS S3 using Axum"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 readme = "README.md"
 
