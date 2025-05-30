@@ -1,0 +1,25 @@
+[package]
+name = "axum-static-s3"
+authors = ["Daniel Pruessner <daniel.pruessner@ieee.org>"]
+license = "MIT OR Apache-2.0"
+description = "A simple static file server for AWS S3 using Axum"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+
+[dependencies]
+aws-config = "1"
+aws-sdk-s3 = "1"
+axum = "0.8"
+aws-sdk-ssm = { version = "1", optional = true }
+tracing = { version = "0.1", features = ["async-await"], optional = true }
+tower-service = "0.3"
+pin-project = "1"
+tokio = { version = "1" }
+futures-core = "0.3"
+
+[features]
+default = []
+aws-parameterstore = ["aws-sdk-ssm"]
+trace = ["tracing"]
+

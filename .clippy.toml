@@ -1,0 +1,8 @@
+# Deny unwrap() calls
+disallowed-methods = [
+    { path = "Result", name = "unwrap" },
+    { path = "Option", name = "unwrap" },
+]
+
+# Allow unwrap() in tests
+allow-unwrap-in-tests = true 
